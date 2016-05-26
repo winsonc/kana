@@ -1,0 +1,16 @@
+.question {
+	font-size: 80vmin;
+	text-align: center;
+	line-height: 80vmin;
+}
+.answer {
+	font-size: 40vmin;
+	text-align: center;
+	line-height: 40vmin;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
+}

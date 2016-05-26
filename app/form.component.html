@@ -1,0 +1,15 @@
+<div class="question" [hidden]="showAnswer">
+  <p>{{ question }}</p>
+</div>
+<div class="answer" [hidden]="!showAnswer">
+  <p>
+    {{ answer.hiragana }}{{ answer.katagana }}
+    <br>{{ answer.roman }}
+  </p>
+</div>
+<div class="container text-center">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default center" (click)="next()">Next</button>
+    <button type="button" class="btn btn-default center" (click)="showAnswer = !showAnswer">Answer</button>
+  </div>
+</div>
