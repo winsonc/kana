@@ -2,10 +2,7 @@
   <p>{{ question }}</p>
 </div>
 <div class="answer" [hidden]="!showAnswer">
-  <p>
-    {{ answer.hirakana }}{{ answer.katakana }}
-    <br>{{ answer.roman }}
-  </p>
+  <p>{{ answer.hirakana }}{{ answer.katakana }}<br>{{ answer.roman }}</p>
 </div>
 <div class="container text-center buttons">
   <div class="btn-group">
