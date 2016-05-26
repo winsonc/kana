@@ -16,13 +16,13 @@
           this.kanas.push(kana);
         }
         this.random = _.random(0, this.kanas.length - 1);
-        this.question = this.kanas[this.random].hiragana;
+        this.question = this.kanas[this.random].hirakana;
         this.answer = this.kanas[this.random];
       },
       next: function () {
         this.showAnswer = false;
         this.random = _.random(0, this.kanas.length - 1);
-        this.question = this.kanas[this.random].hiragana;
+        this.question = this.kanas[this.random].hirakana;
         this.answer = this.kanas[this.random];
       }
     });

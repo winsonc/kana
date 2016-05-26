@@ -2,7 +2,7 @@ var gulp             = require('gulp')
 ,	gutil            = require('gulp-util')
 ,	concat           = require('gulp-concat')
 
-// CSS
+// SASS
 ,	sass             = require('gulp-sass')
 ,	csso             = require('gulp-csso')
 
@@ -12,8 +12,8 @@ var gulp             = require('gulp')
 
 ;
 
-// CSS
-gulp.task('css', function () {
+// SASS
+gulp.task('sass', function () {
 	return gulp
 		.src('src/assets/stylesheets/*.sass')
 		.pipe(
@@ -25,6 +25,15 @@ gulp.task('css', function () {
 		.pipe(csso())
 		.pipe(gulp.dest('dist/assets/stylesheets'))
 		.pipe(livereload());
+});
+
+gulp.task('css', function () {
+	return gulp
+		.src([
+			'node_modules/bootstrap/dist/css/bootstrap.min.css'
+		])
+		.pipe(concat('vendor.css'))
+		.pipe(gulp.dest('./'));
 });
 
 // Coffeescript
@@ -69,4 +78,4 @@ gulp.task('watch', function (event) {
 	gulp.watch('src/*.jade', ['html']);
 });
 
-gulp.task('default', ['css', 'coffeescript', 'html', 'watch']);
+gulp.task('default', ['sass', 'coffeescript', 'html', 'watch']);

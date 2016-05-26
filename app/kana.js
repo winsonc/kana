@@ -2,7 +2,7 @@
   app.Kana = Kana;
   function Kana(r, h, k) {
     this.roman    = r;
-    this.hiragana = h;
-    this.katagana = k;
+    this.hirakana = h;
+    this.katakana = k;
   }
 })(window.app || (window.app = {}));
